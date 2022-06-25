@@ -1,0 +1,36 @@
+{
+   "compilerOptions": {
+      "typeRoots": [
+         "./node_modules/@types",
+         "src/types",
+         "src/interfaces"
+      ],
+      "module": "commonjs",
+      "target": "ES2017",
+      "outDir": "./dist",
+      "rootDir": "./src",
+      "esModuleInterop": true,
+      "noEmitOnError": true,
+      "noImplicitAny": true,
+      "alwaysStrict": true,
+      "resolveJsonModule": true,
+      "baseUrl": ".",
+      "paths": {
+         // ao colocar um novo path tem que adicionar junto ao babel
+         "@models/*": ["./src/models/*"],
+         "@controller/*": ["./src/controller/*"],
+         "@routes/*": ["./src/routes/*"],
+         "@interfaces/*": ["src/interfaces/*"],
+         "@validators/*": ["src/validators/*"],
+         "@repositories/*": ["src/repositories/*"],
+         "@configs/*": ["./src/configs/*"],
+         "@services/*": ["./src/services/*"]
+      }
+   },
+   "exclude": [
+      "node_modules"
+   ],
+   "include": [
+      "src/**/*.ts"
+   ]
+}

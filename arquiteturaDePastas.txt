@@ -1,0 +1,33 @@
+banco de dados {
+   entities: pasta onde ficam as tabelas do banco de dados relacional, no caso cada entidade é uma tabela.
+   schemas: pasta onde ficam as entidades do banco de dados nao relacional, cada schema é uma nova entidade.
+   models: pasta onde ficam as entidades ou schemas.
+   repositories: pasta voltada as funções CRUD do banco de dados para cada entidade/schema.
+   migrations: pasta onde fica o código referente a criação, alteração ou deleção de uma tabela ou schema do banco de dados
+}
+
+shared/common: pasta onde tem arquivos e/ou funções que são utilizados com frequência por toda a aplicação.
+shared/common {
+   helpers/(utils?): pasta onde ficam funções utilitárias de ajuda comumente usadas
+   container: 
+   errors: 
+   middlewares: pasta que contem funções a serem durante executadas antes ou durante alguma requisição http
+}
+
+routes: pasta onde ficam os métodos http referente a cada endpoint criado no arquivo de rotas.
+infra: pasta onde fica os arquivos de infraestrutura do projeto, como o app, server e routes(arquivo não pasta).
+
+useCases/(services?)/(validators?): pasta onde é implementada a regra de negócios. Todas as validações devem ser feitas aqui antes que possa prosseguir e realizar alguma alteração no banco de dados.
+
+controller: paste que recebe as requisições(request), envia os dados necessários da requisição para o useCase e devolve uma resposta(response) com base no êxito ou na falha durante o useCase ou até da conexão.
+
+assets: pasta onde ficam os arquivos estáticos da aplicação como internacionalização.
+
+config: pasta onde ficam as configurações dos serviços(extensões) que estão sendo utilizadas como por exemplo um serviço de banco de dados ou então um serviço de autenticação
+
+dto: pasta onde ficam as interfaces com os tipos de dados que são trafegados entre a camada de infraestrutura e a camada de domínio.(
+   exs: se para criar um usuario eu preciso de nome, email e senha eu terei uma interface DTO de criação de usuário com esses 3 campos obrigatórios;
+   se para atualizar eu preciso do id, além dos dados de atualização eu terei outra interface DTO com todos esses dados;
+   para encontrar um usuário ou mais eu posso pedir diversas informações como nome, email ou id, isso seria outra interface DTO;
+   se para deletar eu preciso apenas do id do usuário, eu terei outra interface apenas contendo o id.
+)

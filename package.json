@@ -1,0 +1,48 @@
+{
+  "name": "APINode",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node dist/server.js",
+    "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files --no-copy-ignored",
+    "dev": "ts-node-dev -r tsconfig-paths/register --respawn --transpile-only --ignore-watch node_modules --no-notify src/server.ts",
+    "test": "jest",
+    "db": "StartMongo.bat"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.5",
+    "@babel/node": "^7.18.5",
+    "@babel/preset-env": "^7.18.2",
+    "@babel/preset-typescript": "^7.17.12",
+    "@types/debug": "^4.1.7",
+    "@types/express": "^4.17.13",
+    "@types/jsonwebtoken": "^8.5.8",
+    "@types/md5": "^2.3.2",
+    "@types/nodemailer": "^6.4.4",
+    "@types/uuid": "^8.3.4",
+    "@typescript-eslint/eslint-plugin": "^5.28.0",
+    "@typescript-eslint/parser": "^5.28.0",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "eslint": "^7.32.0 || ^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "jest": "^28.1.1",
+    "ts-jest": "^28.0.5",
+    "ts-node-dev": "^2.0.0",
+    "tsconfig-paths": "^4.0.0",
+    "typescript": "^4.7.3"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "debug": "^4.3.4",
+    "express": "^4.18.1",
+    "http": "^0.0.1-security",
+    "jsonwebtoken": "^8.5.1",
+    "md5": "^2.3.0",
+    "mongoose": "^6.3.8",
+    "nodemailer": "^6.7.5",
+    "uuid": "^8.3.2"
+  }
+}

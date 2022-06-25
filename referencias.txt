@@ -1,0 +1,10 @@
+versoes {
+   node: 16.15.1
+   npm: 8.11.0
+   yarn : 1.22.19
+}
+
+instanlacoes {
+   mongoDB e mongosh
+   mongoDB compass (opicional)
+}

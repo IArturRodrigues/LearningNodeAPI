@@ -1,0 +1,15 @@
+N-Layers architecture
+
+src - todo o conteúdo do código
+   - entities: mapeamento de objetos
+   - factories: gerador de instancias
+   - repositories: acesso aos arquivos
+   - routes: mapeamento dos endpoints
+   - services: comunicação entre as rotas e os repositórios (regra de negócios)
+   - util: compartilhamento de código
+   - handler.* - comunicação entre o servidor e as rotas
+   - index.* - instancia do servidor
+
+tests - all automated test suites
+   - integration tests: testes do ponto de vista do usuário. É também um teste E2E pq não há nenhuma aplicação consumindo.
+   - unit tests: devem ser todos os testes sem conexões externas como banco de dados, API's externas dependendo do caso, o fileSystem também

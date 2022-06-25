@@ -1,0 +1,31 @@
+{
+   "presets": [
+      [
+         "@babel/preset-env",
+         {
+            "targets": {
+               "node": "current"
+            }
+         }
+      ],
+      "@babel/preset-typescript"
+   ],
+   "plugins": [
+      ["module-resolver", {
+         "alias": {
+            // '@folderName: './src/folderName',
+            "@models": "./src/models",
+            "@controller": "./src/controller",
+            "@routes": "./src/routes",
+            "@interfaces": "./src/interfaces",
+            "@validators": "./src/validators",
+            "@repositories": "./src/repositories",
+            "@configs": "./src/configs",
+            "@services": "./src/services"
+         }
+      }]
+   ],
+   "ignore": [
+      "**/*.spec.ts"
+   ]
+}
